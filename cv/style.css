@@ -22,7 +22,6 @@ body {
 background: #f5f6fa;
 width: 1000px;
 box-shadow: 7px 7px 7px 1px #2f3640;
-height: calc(100vh - 42px);
 display: flex;
 flex-direction: row;
 }
