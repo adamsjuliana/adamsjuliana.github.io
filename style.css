@@ -18,17 +18,52 @@ body{
     color: #40739e;
     font-family: 'Poppins', sans-serif;
 }
-h1{
+/*h1{
     color: #8c7ae6;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 60px;
+}*/
+.loader h1{
+    position: absolute;
+    top: 43%;
+    left: 35%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 60px;
+    color: transparent;
+}
+.loader h1:before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #9c88ff;
+    overflow: hidden;
+    border-right: 1px solid #9c88ff;
+    animation: type 5s steps(15) infinite;
+    white-space: nowrap;
+}
+@keyframes type {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
 }
 h2, h3{
     font-size: 20px;
 }
 h2{
     color: #e1b12c;
+    margin-bottom: 20px;
 }
 .cabecalho {
     height: 100vh;
@@ -90,7 +125,6 @@ justify-content: center;
     justify-content: center;
 }
 .social-media a{
-
     font-size: 30px;
     color:#40739e;
     border: 0.2px solid #40739e;
@@ -103,20 +137,67 @@ justify-content: center;
     border: 0.2px solid #e1b12c;
 }
 .principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.principal-sobre, .principal-projetos, .principal-habilidades, .principal-contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 1100px;
     height: 100vh;
-    margin-top: 30px;
 }
-.principal-projetos h2{
+.habilidades{
+    display: flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+    width: 1100px;
+}
+.icons{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-row: auto auto;
+    grid-row-gap: 40px;
     text-align: center;
-
 }
-.projetos{
+.principal-sobre h2, .principal-projetos h2, .principal-habilidades h2, .principal-contato h2{
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+.projetos, .sobre{
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     gap: 140px;
-
 }
+.icons{
+    font-size: 150px;
+    display
+}
+.legenda{
+    font-size: 25px;
+    height:100px;
+    width:100px;
+    position: relative;
+    text-align: center;
+}
+.fa-html5{
+    color: #ff4c14ff;
+}
+.fa-css3-alt{
+    color: #0076beff;
+}
+.fa-js{
+    color: #e5a32aff;
+}
+.fa-java{
+    color: #0d8ac7ff;
+}
+/*.contato{
+
+}*/
