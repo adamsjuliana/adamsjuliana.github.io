@@ -177,7 +177,6 @@ justify-content: center;
 }
 .icons{
     font-size: 150px;
-    display
 }
 .legenda{
     font-size: 25px;
@@ -187,16 +186,16 @@ justify-content: center;
     text-align: center;
 }
 .fa-html5{
-    color: #ff4c14ff;
+    color: #ff4c14;
 }
 .fa-css3-alt{
-    color: #0076beff;
+    color: #0076be;
 }
 .fa-js{
-    color: #e5a32aff;
+    color: #e5a32a;
 }
 .fa-java{
-    color: #0d8ac7ff;
+    color: #0d8ac7;
 }
 /*.contato{
 
