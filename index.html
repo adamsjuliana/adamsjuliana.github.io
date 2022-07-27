@@ -1,109 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0a84b03181.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
     <title>Juliana Adams - Portfólio</title>
 </head>
-<body>
-<div class="menu">
-    <ul> 
-        <div class="nav">
-             <li><a class="hm" href="#home">Início</a></li>
-             <li><a class="sb" href="#sobre">Sobre</a></li>
-             <li><a class="pj" href="#projetos">Projetos</i></a></li>
-             <li><a class="hb" href="#habilidades">Habilidades</i></a></li>
-             <li><a class="ct" href="#contato">Contato</a></li>
-        </div>
-    </ul>
-</div>
-<section id="home">
-    <div class="principal-titulo"><h2>Bem Vindo!</h2></div>
-  <header class="cabecalho">
-    <div class="cabecalho-texto">
-        <h2>Olá, eu sou</h2>
-        <div class="loader">
-            <h1 data-text="Juliana Adams">Juliana Adams</h1>
-        </div>
-        <h2>Programadora full-stack em desenvolvimento</h2>
-        <div class="social-media">
-            <a href="https://www.linkedin.com/in/adamsjuliana/" target="_blank">Linkedin</a>
-            <a href="https://github.com/adamsjuliana" target="_blank">Github</a>
-            <a href="https://adamsjuliana.github.io/cv/" target="_blank">CV</a>
-        </div>
-    </div>
-    <div class="imag">
-    <figure>
-        <img class="fig-imagem" src="girlcode.png" alt="Girl Programmer">
-    </figure>
-</div>
-</header>
-</section>
 
-<main class="principal">  
-<section id="sobre">    
-    <div class="principal-titulo"><h2>Sobre</h2></div>
-    <div class="principal-sobre">
-            <div class="sobre">
-                <div class="loading-box1">
-                    <div class="loading1"></div>
-                    <div class="texto">em breve</div>
-                </div>
-                <div class="descricao">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </div>
+<body>
+
+    <section class="secao">
+        <div class="principal">
+            <div class="principal__texto">
+                <h2 class="principal-desc">Olá, eu sou</h2>
+                <h1 class="principal-titulo">Juliana Adams</h1>
+                <h2 class="principal-desc">Programadora full-stack em desenvolvimento</h2>
+                <h2 class="principal-desc">Acadêmica de Matemática</h2>
             </div>
+        </div>
+        <div class="secundario">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="html.png" alt="HTML 5"><p>HTML 5</p></div>
+                    <div class="swiper-slide"><img src="css.png" alt="CSS 3"><p>CSS 3</p></div>
+                    <div class="swiper-slide"><img src="java.png" class="java" alt="Java"><p>JAVA</p></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </div>
+    </section>
+    <div class="contato">
+        <img src="curriculo.svg" alt="Currículo">
+        <span>
+            <h2>Currículo</h2>
+            <p><a href="https://adamsjuliana.github.io/cv/" target="_blank">adamsjuliana.github.io/cv</a></p>
+        </span>
+        <img src="linkedin.svg" alt="Linkedin">
+        <span>
+            <h2>Linkedin</h2>
+            <p><a href="https://www.linkedin.com/in/adamsjuliana/" target="_blank">linkedin.com/in/adamsjuliana</a></p>
+        </span>
+        <img src="github.svg" alt="Github">
+        <span>
+            <h2>Github</h2>
+            <p><a href="https://github.com/adamsjuliana" target="_blank">github.com/adamsjuliana</a></p>
+        </span>
+        <img src="email.svg" alt="E-mail">
+        <span>
+            <h2>E-mail</h2>
+            <p>julianapadams@gmail.com</p>
+        </span>
     </div>
-</section>
-<section id="projetos">
-    <div class="principal-titulo"><h2>Projetos</h2></div>    
-    <div class="principal-projetos">
-        
-            <div class="projetos">
-                <div class="loading-box">
-                    <div class="loading"></div>
-                    <div class="texto">em breve</div>
-                </div>
-                <div class="descricao">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </div>        
-            </div>
-            <div class="projetos">
-                <div class="loading-box">
-                    <div class="loading"></div>
-                    <div class="texto">em breve</div>
-                </div>
-                <div class="descricao">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                </div>
-            </div>
-    </div>
-</section>
-<section id="habilidades">
-    <div class="principal-titulo"><h2>Habilidades</h2></div>
-    <div class="principal-habilidades">
-            <div class="habilidades">
-                <div class="icons">
-                    <i class="fa-brands fa-html5" title="HTML5"></i>
-                    <i class="fa-brands fa-css3-alt" title="CSS3"></i>
-                    <i class="fa-brands fa-js" title="JS"></i>
-                    <i class="fa-brands fa-java" title="JAVA"></i>
-                    </div>
-            </div>
-    </div>
-</section>
-<section id="contato">
-    <div class="principal-titulo"><h2>Contato</h2></div>    
-    <div class="principal-contato">
-            <div class="contato">
-                <i class="fa-solid fa-envelope"></i> julianapadams@gmail.com
-            </div>
-    </div>
-</main>
-</section>
-    <div class="credito"><h3>Juliana Pienis Adams © 2022 | <i>Css vetor criado por vectorjuice - <a href="https://br.freepik.com/fotos-vetores-gratis/css" target="_blank">br.freepik.com</a></i> </h3></div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
