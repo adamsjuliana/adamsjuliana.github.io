@@ -26,49 +26,23 @@ display: flex;
 flex-direction: row;
 }
 h1{
-font-size: 35px;
-color: #c23616;
+font-size: 30px;
 }
 h2{
-    font-size: 25px;
+    font-size: 16px;
     color: #718093;
+    line-height: .7rem;
+    font-weight: 200;
 }
 h3{
     font-size: 25px;
-    color: #8c7ae6;
     border-bottom: 2px solid;
-    margin-bottom: 15px;
+    margin: 15px;
 }
-.loading-box{
-    width: 200px;
-    height: 200px;
+.loading-box img{
+    width: 250px;
 }
-.loading-box .texto{
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #2f3640;
-}
-.loading{
-    animation: rotating 1.5s infinite;
-    width: 200px;
-    height: 200px;
-    border: 20px solid #e5e5e5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top-color: #e1b12c;
-    border-radius: 50%;
-    position: absolute;
-}
-@keyframes rotating {
-    to {
-        transform: rotate(1turn);
-    }
-}
+
 .esquerda{
     margin-top: 25px;
     width: 300px;
@@ -91,7 +65,7 @@ h3{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-size: 17px;
+    font-size: 15px;
 }
 .fa-brands, .fa-solid{
     color: #0097e6;
@@ -100,11 +74,10 @@ h3{
     padding: 10px;
     width: 1000px;
     text-align: center;
-    color:#f1f1f1;
     font-size: 15px;
+    background-color: #f5f6fa;
 }
 .box{
-    padding: 10px;
     line-height: 2rem;
 }
 dt{
