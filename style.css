@@ -12,35 +12,50 @@ body{
 }
 .secao{
     display: flex;
-    position: absolute;
-    flex-direction: row;
-    height: 100vh; 
-    width: 100vw;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     font-size: 12px;
 }
+.secundario-titulo{
+    margin-top: 1rem;
+    margin-bottom: -2rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
 .principal-titulo{
     font-family: 'Great Vibes', cursive;
-    font-size: 4rem;
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem 1rem 0 1rem;
 }
 .contato img{
     width: 42px;
 }
 .principal-desc{
     font-weight: 200;
-    font-size: 1rem;
+    font-size: .8rem;
+    text-align: center;
+    padding: 0 .5rem 0 .5rem;
 }
 .contato{
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-left: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 10px;
+    margin-top: 1rem;
+}
+.contato-item{
     display: flex;
     gap: 1rem;
-    font-size: 10px;
-
 }
 .contato a{
+
     color: #f5f6fa;
     text-decoration: none;
 }
@@ -62,15 +77,16 @@ body{
     width: 32px;
 }
 .swiper{
-    width: 400px;
-    height: 300px;
-  }
+    width: calc(100vw - 3rem);
+    height: 260px;
+}
 .swiper-button-prev, .swiper-button-next{
     color: #f5f6fa;
 }
 .swiper-wrapper{
     text-align: center;
 }
+
 .swiper-slide{
     display: flex;
     gap: 1rem;
@@ -80,8 +96,40 @@ body{
     align-items: center;
 }
 .swiper-slide img{
-    width: 10rem;
+    max-width: 7rem;
+    max-height: 7rem;
 }
 .java{
     border-radius: 15px;
+}
+@media screen and (min-width: 860px){
+.contato{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}
+.secao{
+    flex-direction: row;
+    position: absolute;
+    height: 100vh; 
+    width: 100vw;
+}
+.swiper{
+    width: 400px;
+    height: 300px;
+  }
+  .swiper-slide img{
+    max-width: 10rem;
+    max-height: 10rem;
+}
+.principal-titulo{
+    font-size: 4rem;
+    padding: 0;
+    text-align: left;
+}
+.principal-desc{
+    font-size: 1.1rem;
+    text-align: left;
+    padding: 0;
+}
 }
