@@ -20,7 +20,7 @@ body {
 }
 .container{
 background: #f5f6fa;
-width: 1000px;
+width: 900px;
 box-shadow: 2px 2px 20px rgba(0,0,0, 0.2);
 display: flex;
 flex-direction: row;
@@ -43,6 +43,7 @@ h3{
 
 .esquerda{
     margin-top: 25px;
+    font-size: 13px;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -68,10 +69,14 @@ h3{
 }
 .rodape{
     padding: 10px;
-    width: 1000px;
+    width: 900px;
     text-align: center;
     font-size: 12px;
     background-color: #f5f6fa;
+}
+.imprimir{
+    margin:1rem;
+
 }
 .box{
     line-height: 1.5rem;
@@ -109,4 +114,9 @@ ol li{
 }
 .direita .box{
     margin-left: 1.5rem;
+}
+@media print {
+    .imprimir{
+        display: none;
+    }
 }
