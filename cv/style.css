@@ -130,6 +130,9 @@ h4{
 ol li{
     list-style-type: disc;
 }
+.linki{
+    color: #a70c0c;
+}
 .direita .box{
     margin-left: 1.5rem;
 }
