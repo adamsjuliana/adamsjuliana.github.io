@@ -18,25 +18,95 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .info{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 0.5rem;
     font-size: 13px;
+}
+.info a{
+    color: #c44db0;
 }
 .container{
 background: #f5f6fa;
 width: 900px;
 box-shadow: 2px 2px 20px rgba(0,0,0, 0.2);
 display: flex;
-flex-direction: row;
+flex-direction: column;
 }
+
+.container1{
+    background: #f5f6fa;
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    }
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 250px;
+  }
+
+  .card h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  .card p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+  .skill-container {
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .skill {
+    height: 10px;
+    border-radius: 8px;
+  }
+
+  .python {
+    width: 50%; /* Ajustar conforme o nível de habilidade */
+    background: #c44db0;
+  }
+
+  .database {
+    width: 40%; /* Ajustar conforme o nível de habilidade */
+    background: #c44db0;
+  }
+
+  .kubernets {
+    width: 30%; /* Ajustar conforme o nível de habilidade */
+    background: #c44db0;
+  }
+
+  .kafka {
+    width: 10%; /* Ajustar conforme o nível de habilidade */
+    background: #c44db0;
+  }
+
+  .apachespark{
+    width: 70%; /* Ajustar conforme o nível de habilidade */
+    background: #c44db0;
+  }
+
 h1{
     font-size: 18px;
 }
 h2{
     color: #718093;
-    font-size: 14px;
+    font-size: 13px;
 }
 h3{
     border-bottom: 2px solid;
@@ -44,25 +114,30 @@ h3{
     font-size: 14px;
 }
 h4{
-    color: #cc1212;
+    color: #c44db0;
     text-align: center;
     font-weight: 500;
+    margin: 0.5rem 0 0.5rem 0;
 }
 h5{
-    color: #cc1212;
+    color: #c44db0;
     font-weight: 500;
     font-size: 13px;
 }
-
+h6{
+    font-size: 14px;
+    border-bottom: 2px solid;
+    margin: 1rem 0 1rem 0;
+    font-size: 14px;
+}
 .loading-box img{
     width: 220px;
     display: none;
 }
 
 .esquerda{
-    margin-top: 25px;
     font-size: 13px;
-    width: 300px;
+    width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,17 +145,22 @@ h5{
     border-right: 1px solid #7f8fa6;
 }
 .direita{
-    margin-top: 25px;
     padding: 0 20px;
     width: 700px;
     display: flex;
     flex-direction: column;
 }
 .social-media{
-    margin: 8px 0;
+    font-size: 16px;
+    text-align: left;
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-media a{
+color: #c44db0;;
 }
 .fa-brands, .fa-solid{
     color: #353738;
@@ -110,7 +190,7 @@ h5{
     line-height: 1.5rem;
 }
 dt{
-    color: #cc1212;
+    color: #c44db0;
 }
 dd{
     font-style: italic;
@@ -120,12 +200,35 @@ dd{
     text-align: left;
 }
 .tecnologias{
-    margin-left: 2rem;
+    margin-left: 1rem;
+    width: 80%;
 }
 .title{
-    color: #cc1212;
+    color: #c44db0;
     font-weight: 500;
+    font-size: 18px;
 }
+
+.card2 {
+    width: 100%;
+    transition: 0.3s;
+    border-radius: 5px;
+    text-align: left;
+    padding: 1rem;
+}
+
+.title2 {
+    color: grey;
+    font-size: 16px;
+}
+.social-media{
+    align-items: center;
+}
+
+.info p {
+    margin: 10px 0;
+}
+
 .principal{
     height: 100%;
     display: flex;
@@ -136,7 +239,7 @@ ol li{
     list-style-type: disc;
 }
 .linki{
-    color: #a70c0c;
+    color: #c44db0;
 }
 .direita .box{
     margin-left: 1.5rem;
