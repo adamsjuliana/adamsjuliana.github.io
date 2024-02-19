@@ -23,12 +23,16 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 0.5rem;
     font-size: 13px;
+    background-color: #e6d4e3;
+    padding: 0 10px;
+    margin: 10px 0 0 0;
 }
 .info a{
     color: #c44db0;
+
 }
+
 .container{
 background: #f5f6fa;
 width: 900px;
@@ -75,29 +79,47 @@ flex-direction: column;
     height: 10px;
     border-radius: 8px;
   }
+    .dez {
+        width: 10%; /* Ajustar conforme o nível de habilidade */
+        background: #c44db0;
+    }
+    .vinte {
+        width: 20%; /* Ajustar conforme o nível de habilidade */
+        background: #c44db0;
+    }
+    .trinta {
+        width: 30%; /* Ajustar conforme o nível de habilidade */
+        background: #c44db0;
+    }
+    .quarenta {
+        width: 40%; /* Ajustar conforme o nível de habilidade */
+        background: #c44db0;
+    }
 
-  .python {
+  .cinquenta {
     width: 50%; /* Ajustar conforme o nível de habilidade */
     background: #c44db0;
   }
-
-  .database {
-    width: 40%; /* Ajustar conforme o nível de habilidade */
+  .sessenta {
+    width: 60%; /* Ajustar conforme o nível de habilidade */
     background: #c44db0;
   }
 
-  .kubernets {
-    width: 30%; /* Ajustar conforme o nível de habilidade */
+  .setenta {
+    width: 60%; /* Ajustar conforme o nível de habilidade */
     background: #c44db0;
   }
 
-  .kafka {
-    width: 10%; /* Ajustar conforme o nível de habilidade */
+  .oitenta {
+    width: 80%; /* Ajustar conforme o nível de habilidade */
     background: #c44db0;
   }
-
-  .apachespark{
-    width: 70%; /* Ajustar conforme o nível de habilidade */
+  .noventa {
+    width: 90%; /* Ajustar conforme o nível de habilidade */
+    background: #c44db0;
+  }
+  .cem {
+    width: 100%; /* Ajustar conforme o nível de habilidade */
     background: #c44db0;
   }
 
@@ -150,8 +172,14 @@ h6{
     display: flex;
     flex-direction: column;
 }
+.certific{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
 .certific img{
     width: 120px;
+    
 }
 .social-media{
     font-size: 16px;
@@ -191,6 +219,7 @@ color: #c44db0;;
 }
 .box{
     line-height: 1.5rem;
+
 }
 dt{
     color: #c44db0;
