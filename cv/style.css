@@ -183,6 +183,7 @@ h6{
 .card1{
     display: flex;
     flex-direction: row;
+    background: #f5f6fa;
 }
 
 .direita{
@@ -216,9 +217,22 @@ h6{
     justify-content: center;
     gap: 15px;
 }
+.certificados{
+    text-align: justify;
+}
+.certificados a{
+    padding: 2px;
+    background-color: #e4bcdd;
+    color: #333;
+}
+.certificados a:hover{
+    padding: 2px;
+    background-color: #ce77bf;
+    color: #ffffff;
+}
 
 .social-media a{
-color: #c44db0;;
+color: #c44db0;
 }
 .fa-brands, .fa-solid{
     color: #353738;
