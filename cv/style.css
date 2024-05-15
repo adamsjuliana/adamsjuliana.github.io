@@ -37,6 +37,18 @@ body {
 
 }
 
+.infopdf {
+    display: none;
+    text-align: right;
+    font-style: italic;
+}
+
+
+.infopdf a{
+    color: #c44db0;
+
+}
+
 .container{
 background: #f5f6fa;
 width: 900px;
@@ -333,15 +345,13 @@ ol li{
     .container{
         background: #fff;
         width: 100vw;
-
+        box-shadow: none;
         }
 
-        .rodape{
+.rodape{
 display: none
         }  
-    
-        .container{
 
-            box-shadow: none;
-
-            }}
+        .infopdf {
+            display: block;
+    }
