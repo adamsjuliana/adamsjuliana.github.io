@@ -326,32 +326,6 @@ ol li{
     margin-left: 1.5rem;
 }
 
-@media (max-width: 800px)
-{
-    .esquerda{
-        width: 100vw;
-        display: flex;
-        align-items: left;
-        flex-direction: column;
-        border-right: 0;
-    }
-    .tecnologias{
-        margin-left: 0;
-    }
-    .direita{
-        margin-top: 25px;
-        padding: 0px;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-    }
-    .container{
-        background: #f5f6fa;
-        width: 900px;
-        display: flex;
-        flex-direction: column;
-        }
-}
 @media print {
     .imprimir{
         display: none;
@@ -359,33 +333,15 @@ ol li{
     .container{
         background: #fff;
         width: 100vw;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column-reverse;
-        padding: 0.3rem;
-        box-shadow: 0px 0px 0px rgba(0,0,0, 0.2);
-        }
-        .esquerda{
-            margin-top: 5px;
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            justify-content: flex-start;
-            border-right: 0px solid #7f8fa6;
-        }
-        .box{
-            line-height: 1.5rem;
-        }
-        .social-media{
-            margin-top: 3rem;
-            align-items: center;
+
         }
 
-        h4{
-            text-align: left;
-
-        }  
         .rodape{
-            margin-top: 3rem;
-        }  }
+display: none
+        }  
+    
+        .container{
+
+            box-shadow: none;
+
+            }}
