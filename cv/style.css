@@ -1,357 +1,698 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+:root {
+    --primary-color: #0b9c95; /* Cor primária (usada em ícones, barras de progresso, etc.) */
+    --secondary-color: #0A0A08; /* Cor de fundo da parte esquerda */
+    --highlight-color: #044946; /* Cor dos títulos */
+    --text-color: #333; /* Cor do texto principal */
+    --text-light-color: #fff; /* Cor do texto claro */
+    --background-color: #636766; /* Cor de fundo do body */
+    --dark-background-color: #707070; /* Cor de fundo escuro */
+    --light-background-color: #f0f0f0; /* Cor do fundo das barras de progresso */
+    --box-shadow-color: rgba(0, 0, 0, 0.1); /* Cor da sombra da caixa */
+    --highlight-dark-color: #081921; /* Cor escura para as barras de progresso e outros elementos escuros */
+    --buttom-color: #848c90;
+    --skills-category-background: #0b9c95;
+    --skills-all-background: #044946;
+}
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  font-family: "Montserrat", sans-serif;
-  text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
+
 body {
-  background: #585c68;
-  font-size: 14px;
-  line-height: 18px;
-  color: #2f3640;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.info{
+    background: var(--background-color);
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    align-items: center; 
-    font-size: 13px;
-
-    padding: 0.7rem 0.5rem;
-    margin: 10px 0 0 0;
-    gap: 0.3rem 1.5rem;
-}
-.info a{
-    color: #c44db0;
-
+    align-items: center;
+    min-height: 100vh;
+    transition: .5s;
 }
 
-.infopdf {
-    display: none;
-    text-align: right;
-    font-style: italic;
-}
-
-
-.infopdf a{
-    color: #c44db0;
-
-}
-
-.container{
-background: #f5f6fa;
-width: 900px;
-box-shadow: 2px 2px 20px rgba(0,0,0, 0.2);
-display: flex;
-flex-direction: column;
-}
-
-.container1{
-    background: #f5f6fa;
-    width: 900px;
-    display: flex;
-    flex-direction: row;
-    }
-
-.card {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 250px;
-  }
-
-  .card h2 {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 5px;
-  }
-
-  .card p {
-    font-size: 0.9em;
-    color: #555;
-    margin-bottom: 10px;
-  }
-
-  .skill-container {
+.container {
+    position: relative;
     width: 100%;
-    background: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  .skill {
-    height: 10px;
-    border-radius: 8px;
-  }
-    .dez {
-        width: 10%; /* Ajustar conforme o nível de habilidade */
-        background: #c44db0;
-    }
-    .vinte {
-        width: 20%; /* Ajustar conforme o nível de habilidade */
-        background: #c44db0;
-    }
-    .trinta {
-        width: 30%; /* Ajustar conforme o nível de habilidade */
-        background: #c44db0;
-    }
-    .quarenta {
-        width: 40%; /* Ajustar conforme o nível de habilidade */
-        background: #c44db0;
-    }
-
-  .cinquenta {
-    width: 50%; /* Ajustar conforme o nível de habilidade */
-    background: #c44db0;
-  }
-  .sessenta {
-    width: 60%; /* Ajustar conforme o nível de habilidade */
-    background: #c44db0;
-  }
-
-  .setenta {
-    width: 60%; /* Ajustar conforme o nível de habilidade */
-    background: #c44db0;
-  }
-
-  .oitenta {
-    width: 80%; /* Ajustar conforme o nível de habilidade */
-    background: #c44db0;
-  }
-  .noventa {
-    width: 90%; /* Ajustar conforme o nível de habilidade */
-    background: #c44db0;
-  }
-  .cem {
-    width: 100%; /* Ajustar conforme o nível de habilidade */
-    background: #c44db0;
-  }
-  .descrijob{
-    margin-left: 3rem;
-    font-size: 12px;
-  }
-
-h1{
-    font-size: 18px;
-}
-h2{
-    color: #718093;
-    font-size: 13px;
-}
-h3{
-    margin: 0.5rem 0 0.5rem 0;
-    font-size: 14px;
-    color: #585c68;
-}
-h4{
-    text-align: center;
-    color: #585c68;
-    font-size: 14px;
-    margin: 0.5rem 0 0.5rem 0;
-}
-h5{
-    color: #c44db0;
-    font-weight: 500;
-    font-size: 13px;
-}
-h6{
-    font-size: 14px;
-    border-bottom: 2px solid;
-    margin: 1rem 0 1rem 0;
-    font-size: 14px;
-}
-.loading-box img{
-    width: 220px;
-    display: none;
+    max-width: 1080px;
+    min-height: 1000px;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgb(0, 0, 0, 0.1);
 }
 
-.esquerda{
-    font-size: 13px;
-    width: 240px;
+.container .left_side {
+    position: relative;
+    background: var(--secondary-color);
+    padding: 40px;
+    border-radius: 30px 0 0 30px;
+}
+
+.profile_text {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-}
-.card3{
-    width: 180px;
-    padding: 20px;
-}
-.card3 img{
-    width: 150px;
-}
-.card1{
-    display: flex;
-    flex-direction: row;
-    background: #f5f6fa;
+    padding-bottom: 20px;
 }
 
-.direita{
-    padding: 0 20px;
-    width: 700px;
-    display: flex;
-    flex-direction: column;
-}
-.certific{
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-.certific img{
-    width: 120px;
-}
-.softskill{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 4rem;
-}
-.softskill img{
-    width: 80px;
-}
-.social-media{
-    font-size: 16px;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-}
-.certificados{
-    text-align: justify;
-}
-.certificados a{
-    padding: 2px;
-    background-color: #e4bcdd;
-    color: #333;
-}
-.certificados a:hover{
-    padding: 2px;
-    background-color: #ce77bf;
-    color: #ffffff;
+.profile_text .img_bx {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
-.social-media a{
-color: #c44db0;
+.profile_text .img_bx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--text-light-color);
 }
-.fa-brands, .fa-solid{
-    color: #353738;
-}
-.rodape{
-    padding: 10px;
-    width: 900px;
+
+.profile_text h2 {
+    color: var(--text-light-color);
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
     text-align: center;
-    font-size: 12px;
-    background-color: #f5f6fa;
+    font-weight: 600;
+    line-height: 1.4em;
 }
-.imprimir{
-    margin:1rem;
-    background-color: black;
-    padding: 0.5rem;
-    border-radius: 50px;
-    border: none;
-    color: #f5f6fa;
+
+.profile_text h2 span {
+    font-size: 0.6em;
+    font-weight: 300;
 }
-.imprimir:hover{
-    border: 1px solid black;
-    background-color: white;
-    color: black;
+
+.contact_info {
+    padding-top: 40px;
+}
+
+.title {
+    color: var(--text-light-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contact_info ul {
+    position: relative;
+}
+
+.contact_info ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
     cursor: pointer;
 }
-.box{
-    line-height: 1.5rem;
+
+.contact_info ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: var(--primary-color);
 }
 
-.box2{
-       padding: 1rem;
-       border-left: 3px solid #c44db0;
-       background-color: #f0f0f0;
-       border-radius: 0 1rem 1rem 0;
-}
-dt{
-    color: #c44db0;
-}
-dd{
-    font-style: italic;
-    text-indent: 2rem;
-}
-.esquerda .box{
-    text-align: left;
-}
-.tecnologias{
-    margin-left: 1rem;
-    width: 80%;
-}
-.title{
-    color: #c44db0;
-    font-weight: 500;
-    font-size: 16px;
+.contact_info ul li span {
+    color: var(--text-light-color);
+    font-weight: 300;
+    font-size: 12px;
 }
 
-.card2 {
+.contact_info ul li a {
+    text-decoration: none;
+}
+
+
+.contact_info.language .percent {
+    position: relative;
     width: 100%;
-    transition: 0.3s;
-    border-radius: 5px;
-    text-align: left;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.3rem;
+    height: 6px;
+    background: var(--highlight-dark-color);
+    display: block;
+    margin-top: 5px;
+}
+
+.contact_info.language .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* Cor das barras de progresso em idiomas */
+    background: var(--primary-color);
+}
+
+.container .right_side {
+    position: relative;
+    background: var(--text-light-color);
+    padding: 40px;
+    transition: .8s;
+    border-radius: 0 30px 30px 0;
+}
+
+.container .right_side p {
+    text-align: justify;
+    text-indent: 2rem;
+    font-size: 15px;
+  }
+
+.about {
+    margin-bottom: 50px;
+}
+
+.about:last-child {
+    margin-bottom: 0;
+}
+.text .bi {
+    color: var(--primary-color);
 }
 
 .title2 {
-    color: grey;
+    /* Cor dos títulos */
+    color: var(--highlight-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--text-color);
+}
+
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.container .right_side .about .box .text {
+    text-align: left;
+    text-indent: 0;
+    font-size: 14px;
+  }
+
+.container .right_side .about .box .text p {
+    text-align: justify;
+    text-indent: 2rem;
+    font-size: 14px;
+  }
+
+.about .box .year_company {
+    min-width: 150px;
+}
+
+.about .box .year_company h5 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+.about .box .text h4 {
+    text-transform: uppercase;
+    /* Cor nome do cargo em experiência */
+    color: #1f7a76;
     font-size: 16px;
 }
-.social-media{
+
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
     align-items: center;
 }
 
+.skills .box h4 {
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
 
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: var(--light-background-color);
+}
 
-.principal{
+.skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
+    background: var(--primary-color);
+}
+
+.interest ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.interest ul li {
+    list-style: none;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.interest ul li .fa {
+    color: var(--primary-color);
+    font-size: 18px;
+    width: 20px;
+}
+
+.container .right_side h1 {
+    color: var(--primary-color);
+}
+
+.trilho {
+    width: 60px;
+    height: 30px;
+    background-color: #848c90;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.trilho .indicador {
+    width: 30px;
+    height: 30px;
+    background-color: var(--text-light-color);
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: .5s;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para o botão redondo */
+.button {
+    background-color: #fff; /* Cor de fundo do botão */
+    border: 1.5px solid var(--buttom-color);
+    color: black; /* Cor do texto e ícones */
+    text-align: center; /* Alinha o conteúdo dentro do botão */
+    display: inline-flex; /* Exibe o ícone e o texto lado a lado */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    justify-content: center; /* Alinha o conteúdo horizontalmente */
+    border-radius: 50%; /* Torna o botão redondo */
+    font-size: 18px; /* Tamanho da fonte (ajustado para o ícone) */
+    cursor: pointer; /* Torna o cursor em forma de mãozinha */
+    width: 30px; /* Largura do botão */
+    height: 30px; /* Altura do botão, igual à largura para manter a forma circular */
+  }
+
+.button.dark {
+    background-color: black; /* Cor de fundo do botão */
+    border: 1.5px solid #d4d4d4;
+    color: white; /* Cor do texto e ícones */
+    text-align: center; /* Alinha o conteúdo dentro do botão */
+    display: inline-flex; /* Exibe o ícone e o texto lado a lado */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    justify-content: center; /* Alinha o conteúdo horizontalmente */
+    border-radius: 50%; /* Torna o botão redondo */
+    font-size: 18px; /* Tamanho da fonte (ajustado para o ícone) */
+    cursor: pointer; /* Torna o cursor em forma de mãozinha */
+    width: 30px; /* Largura do botão */
+    height: 30px; /* Altura do botão, igual à largura para manter a forma circular */
+}
+
+.trilho .indicador i {
+    font-size: 20px;
+}
+
+.light-dark-mode {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 1rem;
+}
+
+.trilho.dark {
+    background-color: #d4d4d4;
+}
+
+.trilho.dark .indicador{
+    left: 30px;
+    background-color: var(--highlight-dark-color);
+}
+
+.trilho.dark .indicador i {
+    color: var(--text-light-color);
+}
+
+body.dark {
+    background-color: var(--dark-background-color);
+}
+
+body.dark .container .right_side {
+    background-color: #333333;
+    color: var(--text-light-color);
+}
+
+body.dark .container .right_side h1 {
+    color: var(--secondary-color);
+}
+
+body.dark .title2 {
+    color: var(--primary-color);
+}
+
+body.dark p {
+    color: var(--text-light-color);
+}
+
+body.dark .about .box .text h4 {
+    color: var(--primary-color)
+}
+
+body.dark .skills .box h4 {
+    color: #d4d4d4;
+}
+
+body.dark .about .box .year_company h5 {
+    color: #d4d4d4;
+}
+
+body.dark .interest ul li {
+    color: #d4d4d4;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Espaçamento entre as imagens */
+}
+
+.badges img {
+    height: 120px; /* Define a altura das imagens */
+    object-fit: contain; /* Mantém a proporção das imagens */
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito de hover nas imagens */
+.badges img:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente a imagem ao passar o mouse */
+}
+
+.competencias {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte */
+    justify-content: space-evenly; 
+    gap: 10px; /* Espaçamento entre as imagens */
+    width: 100%;
+}
+
+.competencias img {
+    height: 60px; /* Define a altura das imagens */
+    max-width: 100px;
+    object-fit: contain; /* Mantém a proporção das imagens */
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Alinhando a div com os botões */
+.p-skills {
+    display: flex; /* Torna a div um container flexível */
+    justify-content: space-evenly; /* Distribui os botões igualmente com espaçamento entre eles */
+    width: 100%; /* Faz com que a div ocupe toda a largura disponível */
+    padding: 10px 0; /* Adiciona um pouco de espaçamento interno */
+    flex-wrap: nowrap; /* Permite que os itens se movam para uma nova linha quando necessário */
+
+
+}
+
+/* Estilo dos botões */
+.b-skills {
+    flex: 1; /* Faz com que cada botão ocupe uma parte igual da largura */
+    padding: 10px 20px; /* Ajusta o tamanho do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove bordas */
+    cursor: pointer; /* Altera o cursor para um ponteiro */
+    transition: background-color 0.3s; /* Anima a troca de cor */
+    font-size: 12px;
+}
+
+.b-skills.category {
+    background-color: var(--skills-category-background); /* Cor de fundo para os botões */
+}
+
+.b-skills.all {
+    background-color: var(--skills-all-background); /* Cor de fundo para os botões */
+}
+
+/* Efeito de tremor para o botão "Mostrar Todos" */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    50% {
+        transform: translateX(2px);
+    }
+    75% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.b-skills.category:hover {
+    color: #f3f3f3;
+}
+
+.b-skills.all:hover {
+    color: #f3f3f3;
+}
+
+
+/* Alinhando a div com os botões */
+.p-sections {
+    display: flex; /* Torna a div um container flexível */
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly; /* Distribui os botões igualmente com espaçamento entre eles */
+    width: 100%; /* Faz com que a div ocupe toda a largura disponível */
+    padding: 10px 0; /* Adiciona um pouco de espaçamento interno */
+    flex-wrap: nowrap; /* Permite que os itens se movam para uma nova linha quando necessário */
+
 }
-ol li{
-    list-style-type: disc;
+
+/* Estilo dos botões */
+.b-sections {
+    flex: 1; /* Faz com que cada botão ocupe uma parte igual da largura */
+    padding: 10px 20px; /* Ajusta o tamanho do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove bordas */
+    background: var(--secondary-color);
+    cursor: pointer; /* Altera o cursor para um ponteiro */
+    transition: background-color 0.3s; /* Anima a troca de cor */
+    font-size: 12px;
 }
-.linki{
-    color: #c44db0;
+
+.b-sections.all {
+    color: var(--skills-category-background)
 }
-.direita .box{
-    margin-left: 1.5rem;
+
+.b-sections {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.b-sections.category:hover {
+    background-color: var(--box-shadow-color); /* Cor de fundo para os botões */
+    animation: shake 0.2s ease-in-out; /* Aplica a animação shake */
+}
+
+.b-sections.all:hover {
+    background-color: var(--box-shadow-color); /* Cor de fundo para os botões */
+    animation: shake 0.2s ease-in-out; /* Aplica a animação shake */
+}
+
+.l-box a{
+    text-decoration: none;
+    color: var(--highlight-color);
+}
+
+.l-box a:hover{
+    color: var(--primary-color);
+}
+
+.l-box.dark a{
+    text-decoration: none;
+    color: var(--buttom-color);
+}
+
+.l-box.dark a:hover{
+    color: var(--primary-color);
+}
+
+.s-box {
+    padding: 2rem 0;
+    margin: 0 auto; /* Alinha o box no centro */
+    position: relative;
+}
+
+.s-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; /* Largura da borda */
+    border-bottom: 1px solid #d4d4d4;
+}
+
+
+@media not print {
+
+    @media (max-width: 800px) {
+        .container {
+            margin: 10px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .interest ul {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .about .box {
+            flex-direction: column;
+        }
+        .about .box .year_company {
+            margin-bottom: 5px;
+        }
+        .interest ul {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .skills .box {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
 }
 
 @media print {
-    .imprimir{
+
+    @page {
+        margin: 10px;
+    }
+
+    body{
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
+    }
+    
+    .container {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+        min-height: 100%;
+    }
+
+    .container .left_side {
+        font-size: 14px;
+        padding: 60px 20px 40px 20px;
+    }
+
+    .container .right_side {
+        font-size: 12px;
+    }
+
+    .container ~ * {
         display: none;
     }
-    .container{
-        background: #fff;
-        width: 100vw;
-        box-shadow: none;
-        }
 
-.rodape{
-display: none
-        }  
-
-        .infopdf {
-            display: block;
+    .contact_info {
+        padding-top: 20px;
     }
+
+    .contact_info ul li .text {
+        font-size: 12px;
+    }
+
+    .contact_info ul li .icon {
+        width: 20px;
+        font-size: 16px;
+    }
+
+    .about {
+        margin-bottom: 20px;
+    }
+
+    .title2 {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .about .box .text h4 {
+        font-size: 14px;
+    }
+
+
+
+    .about .box .year_company h5 {
+        font-size: 12px;
+    }
+
+
+
+    .about .box .year_company p {
+        font-size: 1px;
+    }
+
+    .about .box {
+        margin: 8px 0;
+    }
+
+    .interest {
+        display: none;
+    }
+
+    .light-dark-mode {
+        display: none;
+    }
+
+    .profile_text .img_bx {
+        width: 140px;
+        height: 140px;
+    }
+
+    .title {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .profile_text h2 {
+        letter-spacing: -1px;
+    }
+
+/* 
+    body {
+        visibility: hidden;
+    }
+    #section-to-print {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+    } */
+}
