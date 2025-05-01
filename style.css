@@ -16,8 +16,10 @@ html, body {
   background: #4e5861;
   font-family: 'Raleway', sans-serif;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 
 .business-card {
@@ -76,7 +78,16 @@ html, body {
   animation: inLeft 0.8s ease;
 }
 
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
 .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   text-align: right;
   animation: inRight 0.8s ease;
 }
@@ -91,13 +102,10 @@ a:hover {
   text-decoration: underline;
 }
 
-.website,
-.links,
-.resume {
-  margin-top: 8px;
-}
 
-.location {
+.linkedin,
+.github,
+.curriculo {
   text-transform: uppercase;
   font-size: 0.85em;
   color: var(--fontAlt);
