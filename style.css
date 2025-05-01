@@ -81,7 +81,22 @@ html, body {
 .left {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 12px; /* espaço entre as linhas */
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 30px auto; /* coluna de ícone + coluna de texto */
+  align-items: center;              /* centraliza verticalmente */
+}
+
+.row i {
+  justify-self: center; /* centraliza o ícone dentro da célula */
+}
+
+.row span {
+  font-size: 1em;
+  color: var(--fontAlt);
 }
 
 .right {
@@ -102,14 +117,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
-.linkedin,
-.github,
-.curriculo {
-  text-transform: uppercase;
-  font-size: 0.85em;
-  color: var(--fontAlt);
-}
 
 .background {
   position: absolute;
