@@ -52,6 +52,7 @@ html, body {
 }
 
 .name {
+  text-transform: uppercase;
   font-size: 1.8em;
   font-weight: bold;
   margin: 0;
