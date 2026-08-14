@@ -1178,7 +1178,8 @@ nav#navbar.scrolled {
 
 @media (max-width: 640px) {
   .section-inner { padding: 0 20px; }
-  .hero-inner { padding: 0 20px; }
+  .hero-inner { padding: 0 20px; grid-template-areas: "copy" "stats"; }
+  .hero-visual { display: none; }
   .section { padding: 84px 0; }
   .pillars { grid-template-columns: 1fr; }
   .projects-grid { grid-template-columns: 1fr; }
