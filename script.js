@@ -16,18 +16,23 @@
   /* ---------- Mobile menu ---------- */
   var navToggle = document.getElementById('navToggle');
   var navMenu = document.getElementById('navMenu');
+  var navScrim = document.getElementById('navScrim');
 
   function closeMenu() {
     navToggle.classList.remove('is-open');
     navMenu.classList.remove('is-open');
+    navScrim.classList.remove('is-open');
     navToggle.setAttribute('aria-expanded', 'false');
   }
 
   navToggle.addEventListener('click', function () {
     var isOpen = navMenu.classList.toggle('is-open');
     navToggle.classList.toggle('is-open', isOpen);
+    navScrim.classList.toggle('is-open', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
   });
+
+  navScrim.addEventListener('click', closeMenu);
 
   /* ---------- Page router (SPA-style, hash based) ---------- */
   var pages = document.querySelectorAll('.page');

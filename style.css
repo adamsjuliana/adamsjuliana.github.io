@@ -329,8 +329,9 @@ nav#navbar.scrolled {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
   background: transparent;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -860,6 +861,8 @@ nav#navbar.scrolled {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 6px 0;
+  margin: -6px 0;
 }
 .project-details summary::-webkit-details-marker { display: none; }
 .project-details summary::after {
@@ -1156,6 +1159,18 @@ nav#navbar.scrolled {
   .nav-links { flex-direction: column; align-items: flex-start; gap: 18px; }
   .nav-cta { align-self: flex-start; }
   .nav-toggle { display: flex; }
+
+  .nav-scrim {
+    position: fixed;
+    inset: var(--nav-h) 0 0 0;
+    background: rgba(2, 4, 8, 0.6);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s var(--ease);
+    z-index: 499;
+  }
+  .nav-scrim.is-open { opacity: 1; pointer-events: auto; }
 
   .exp-card { grid-template-columns: 1fr; gap: 18px; }
   .exp-card-side { flex-direction: row; align-items: center; }
