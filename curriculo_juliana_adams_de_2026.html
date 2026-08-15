@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juliana P. Adams Farias — Engenheira de Dados</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1B2B;
+    --ink-soft:#33465A;
+    --muted:#66798C;
+    --line:#DCE4EC;
+    --rail:#F4F8FA;
+    --cyan:#0E7490;
+    --cyan-soft:#7FC4D2;
+    --gold:#B7791F;
+    --paper:#FFFFFF;
+    --sans:"Inter","Segoe UI",Helvetica,Arial,sans-serif;
+    --mono:"JetBrains Mono","SFMono-Regular",Consolas,monospace;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:#E9EDF1;
+    font-family:var(--sans);
+    color:var(--ink);
+    font-size:10.2pt;
+    line-height:1.45;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .sheet{
+    width:210mm;
+    min-height:297mm;
+    margin:24px auto;
+    padding:15mm 15mm 13mm;
+    background:var(--paper);
+    box-shadow:0 18px 40px rgba(11,27,43,.14);
+  }
+
+  /* ---------- cabeçalho ---------- */
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:16mm}
+  h1{
+    font-size:26pt;font-weight:700;letter-spacing:-.02em;margin:0;line-height:1.05;
+  }
+  h1 .last{color:var(--cyan)}
+  .role{
+    font-family:var(--mono);font-size:8.4pt;font-weight:500;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ink-soft);margin-top:6px;
+  }
+  .contact{font-family:var(--mono);font-size:7.9pt;line-height:1.75;text-align:right;color:var(--ink-soft);white-space:nowrap}
+  .contact a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--line)}
+  .contact span.k{color:var(--cyan-soft)}
+
+  /* barra do pipeline sob o nome */
+  .rule{display:flex;height:2px;margin:10px 0 0;background:var(--line)}
+  .rule i{display:block;height:2px}
+  .rule i:nth-child(1){width:34%;background:var(--cyan)}
+  .rule i:nth-child(2){width:8%;background:var(--gold)}
+
+  /* ---------- resumo ---------- */
+  .summary{margin:11px 0 0;font-size:10pt;color:var(--ink-soft);max-width:180mm}
+  .summary strong{color:var(--ink);font-weight:600}
+
+  /* ---------- grid ---------- */
+  .grid{display:grid;grid-template-columns:1fr 62mm;gap:11mm;margin-top:9mm;align-items:start}
+
+  h2{
+    font-family:var(--mono);font-size:8pt;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--ink);margin:0 0 9px;padding-bottom:5px;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;gap:7px;
+  }
+  h2::before{content:"";width:6px;height:6px;background:var(--cyan);flex:0 0 6px}
+  section + section{margin-top:8mm}
+
+  /* ---------- experiência: espinha de pipeline ---------- */
+  .track{position:relative;padding-left:16px}
+  .track::before{
+    content:"";position:absolute;left:2.5px;top:6px;bottom:6px;width:1px;background:var(--cyan-soft);
+  }
+  .job{position:relative;margin-bottom:6.5mm}
+  .job:last-child{margin-bottom:0}
+  .job::before{
+    content:"";position:absolute;left:-16px;top:4.5px;width:7px;height:7px;
+    background:var(--paper);border:1.5px solid var(--cyan);
+  }
+  .job.now::before{background:var(--gold);border-color:var(--gold)}
+  .job.now::after{
+    content:"";position:absolute;left:-19.5px;top:1px;width:14px;height:14px;
+    border:1px solid rgba(183,121,31,.35);
+  }
+  .job h3{font-size:10.8pt;font-weight:600;margin:0;letter-spacing:-.01em}
+  .meta{
+    font-family:var(--mono);font-size:7.8pt;color:var(--muted);margin:2px 0 5px;
+    display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+  }
+  .meta .co{color:var(--cyan);font-weight:500}
+  .meta .dot{color:var(--line)}
+  .job.now .meta .tag{
+    color:var(--gold);border:1px solid rgba(183,121,31,.4);padding:0 5px;font-size:7pt;letter-spacing:.08em;
+  }
+  ul{margin:0;padding:0;list-style:none}
+  .job li{position:relative;padding-left:12px;margin-bottom:2.5px;color:var(--ink-soft);font-size:9.6pt}
+  .job li::before{content:"";position:absolute;left:0;top:7px;width:4px;height:1px;background:var(--cyan)}
+  .job li b{font-weight:600;color:var(--ink)}
+
+  /* ---------- formação ---------- */
+  .edu h3{font-size:10.4pt;font-weight:600;margin:0}
+  .edu .meta{margin-bottom:0}
+
+  /* ---------- coluna lateral ---------- */
+  aside{background:var(--rail);padding:7mm 6mm;border-top:2px solid var(--cyan)}
+  aside h2{margin-top:0}
+  aside section + section{margin-top:7mm}
+  .cert{display:flex;gap:8px;margin-bottom:6px;align-items:baseline}
+  .cert .yr{font-family:var(--mono);font-size:7.6pt;color:var(--gold);flex:0 0 26px}
+  .cert .nm{font-size:9.2pt;color:var(--ink-soft);line-height:1.3}
+  .cert .nm b{display:block;color:var(--ink);font-weight:600}
+  .skillset{margin-bottom:7px}
+  .skillset .lbl{
+    font-family:var(--mono);font-size:7.2pt;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:3px;
+  }
+  .skillset p{margin:0;font-size:9.2pt;color:var(--ink-soft);line-height:1.45}
+
+  .foot{
+    margin-top:9mm;padding-top:5px;border-top:1px solid var(--line);
+    font-family:var(--mono);font-size:7pt;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+    display:flex;justify-content:space-between;
+  }
+
+  .hint{
+    max-width:210mm;margin:20px auto 0;font-family:var(--mono);font-size:11px;color:#5A6B7C;text-align:center;
+  }
+
+  .pdf-btn{
+    position:fixed;top:20px;right:20px;z-index:10;
+    display:flex;align-items:center;gap:7px;
+    font-family:var(--mono);font-size:9.5pt;font-weight:500;letter-spacing:.04em;
+    color:#fff;background:var(--cyan);border:none;border-radius:3px;
+    padding:10px 16px;cursor:pointer;box-shadow:0 6px 16px rgba(11,27,43,.22);
+    transition:background .15s ease, transform .15s ease;
+  }
+  .pdf-btn:hover{background:#0b5f76;transform:translateY(-1px)}
+  .pdf-btn svg{width:14px;height:14px;flex:0 0 14px}
+
+  /* ---------- impressão A4 ---------- */
+  @page{size:A4;margin:0}
+  @media print{
+    body{background:#fff}
+    .sheet{width:auto;min-height:0;margin:0;padding:13mm 14mm;box-shadow:none}
+    .hint{display:none}
+    .pdf-btn{display:none}
+    aside{background:var(--rail);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .job,.cert,.skillset,.edu{break-inside:avoid;page-break-inside:avoid}
+    h2{break-after:avoid;page-break-after:avoid}
+  }
+
+  @media (max-width:760px){
+    .pdf-btn{top:12px;right:12px;padding:9px 13px;font-size:9pt}
+  }
+
+  @media (max-width:760px){
+    .sheet{width:auto;margin:0;padding:22px 18px;box-shadow:none}
+    .head{flex-direction:column;align-items:flex-start;gap:10px}
+    .contact{text-align:left;white-space:normal}
+    .grid{grid-template-columns:1fr;gap:24px}
+  }
+</style>
+</head>
+<body>
+
+<button class="pdf-btn" onclick="window.print()" type="button">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+  Salvar PDF
+</button>
+
+<div class="sheet">
+
+  <header class="head">
+    <div>
+      <h1>Juliana P. <span class="last">Adams</span> Farias</h1>
+      <div class="role">Engenheira de Dados · Azure · Databricks · Microsoft Fabric</div>
+    </div>
+    <div class="contact">
+      <div><span class="k">loc</span> Jaraguá do Sul, SC · Brasil</div>
+      <div><span class="k">mail</span> <a href="mailto:julianapadams@gmail.com">julianapadams@gmail.com</a></div>
+      <div><span class="k">in</span> <a href="https://linkedin.com/in/adamsjuliana">linkedin.com/in/adamsjuliana</a></div>
+      <div><span class="k">git</span> <a href="https://github.com/adamsjuliana">github.com/adamsjuliana</a></div>
+    </div>
+  </header>
+
+  <div class="rule"><i></i><i></i></div>
+
+  <p class="summary">
+    Engenheira de dados com <strong>4 anos de experiência</strong> em plataformas de dados em nuvem (Azure e GCP).
+    Atuo no ciclo completo de engenharia de dados: ingestão de múltiplas fontes, desenvolvimento e orquestração de
+    pipelines ETL/ELT, processamento distribuído com PySpark e implementação de arquiteturas
+    <strong>Lakehouse e Medalhão</strong> em Databricks e Microsoft Fabric — com foco em qualidade, consistência e
+    sustentação de ambientes produtivos.
+  </p>
+
+  <div class="grid">
+
+    <main>
+      <section>
+        <h2>Experiência</h2>
+        <div class="track">
+
+          <article class="job now">
+            <h3>Engenheira de Dados</h3>
+            <div class="meta">
+              <span class="co">Semantix</span><span class="dot">/</span>
+              <span>Remoto</span><span class="dot">/</span>
+              <span>mai 2026 — atual</span>
+              <span class="tag">ATUAL</span>
+            </div>
+            <ul>
+              <li>Desenvolvimento e manutenção de pipelines de dados em ambiente distribuído.</li>
+              <li>Processamento e transformação de grandes volumes de dados com <b>Spark / PySpark</b>.</li>
+              <li>Modelagem e organização de dados por camadas para consumo analítico.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>Engenheira de Dados</h3>
+            <div class="meta">
+              <span class="co">Atos</span><span class="dot">/</span>
+              <span>Remoto</span><span class="dot">/</span>
+              <span>jul 2025 — mai 2026</span>
+            </div>
+            <ul>
+              <li>Desenvolvimento e orquestração de pipelines de dados no <b>Azure Synapse Analytics</b>, com ingestão de APIs, bancos relacionais e arquivos.</li>
+              <li>Implementação de <b>arquitetura Lakehouse no Microsoft Fabric</b> nas camadas Bronze, Prata e Ouro, com modelagem de dados para analytics.</li>
+              <li>Criação de processos de transformação e análise em <b>PySpark</b>; monitoramento e troubleshooting de pipelines em produção.</li>
+              <li>PoC de captura de dados em tempo real (<b>CDC</b>) a partir do SQL Server com <b>Debezium e Apache Kafka</b>: configuração de conectores, tópicos e consumo de eventos.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>Analista de Infraestrutura de Cloud</h3>
+            <div class="meta">
+              <span class="co">Atos</span><span class="dot">/</span>
+              <span>Remoto</span><span class="dot">/</span>
+              <span>ago 2023 — jul 2025</span>
+            </div>
+            <ul>
+              <li>Construção de pipelines e orquestração no <b>Azure Data Factory</b> (atividades, triggers, integration runtimes e conectores).</li>
+              <li><b>Azure Databricks</b>: desenvolvimento em notebooks, gestão de clusters e jobs e otimização de código Spark.</li>
+              <li><b>Delta Lake</b>: implementação de tabelas otimizadas para processamento de grandes volumes, aplicando práticas de Lakehouse e governança de dados.</li>
+              <li>Administração de <b>Azure Storage</b> (ADLS Gen2 e Blob): manipulação de dados e gestão de permissões.</li>
+              <li>Gerenciamento de custos e billing em <b>Azure e GCP</b>; documentação técnica de pipelines, scripts e processos.</li>
+              <li>Rotina em metodologias ágeis (Scrum e Kanban) e versionamento com Git / Azure Repos.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <h3>Desenvolvedora de Aplicações</h3>
+            <div class="meta">
+              <span class="co">Atos</span><span class="dot">/</span>
+              <span>Remoto</span><span class="dot">/</span>
+              <span>ago 2022 — ago 2023</span>
+            </div>
+            <ul>
+              <li>Scripts em <b>Python</b> para automação da coleta e análise de uso de recursos via <b>APIs REST da Azure</b>, com geração de relatórios.</li>
+              <li>Configuração de rotas e endpoints no <b>IoT Hub</b> para ingestão de dados e de Diagnostic Settings para monitoramento de serviços.</li>
+              <li>Criação de alertas customizados no <b>Azure Monitor</b> para detecção proativa de falhas.</li>
+              <li>Automação do envio de relatórios via SendGrid, integrando dados coletados em ambiente Azure.</li>
+            </ul>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="edu">
+        <h2>Formação</h2>
+        <h3>Bacharelado em Sistemas de Informação</h3>
+        <div class="meta"><span class="co">UNIASSELVI</span><span class="dot">/</span><span>2022 — 2026</span></div>
+      </section>
+    </main>
+
+    <aside>
+      <section>
+        <h2>Certificações</h2>
+        <div class="cert"><span class="yr">2026</span><span class="nm"><b>Fabric Data Engineer Associate</b> Microsoft · DP-700</span></div>
+        <div class="cert"><span class="yr">2025</span><span class="nm"><b>Professional Data Engineer</b> Google Cloud</span></div>
+        <div class="cert"><span class="yr">2024</span><span class="nm"><b>Azure Data Engineer Associate</b> Microsoft · DP-203</span></div>
+        <div class="cert"><span class="yr">2024</span><span class="nm"><b>Certified Data Engineer Associate</b> Databricks</span></div>
+        <div class="cert"><span class="yr">2024</span><span class="nm"><b>Certified Cloud Practitioner</b> Amazon Web Services</span></div>
+        <div class="cert"><span class="yr">2023</span><span class="nm"><b>Azure Fundamentals</b> Microsoft · AZ-900</span></div>
+      </section>
+
+      <section>
+        <h2>Competências</h2>
+        <div class="skillset">
+          <div class="lbl">Cloud &amp; plataformas</div>
+          <p>Azure Data Factory, Azure Synapse Analytics, Azure Databricks, Microsoft Fabric, Azure Storage (ADLS Gen2, Blob, Table), BigQuery, GCP, AWS</p>
+        </div>
+        <div class="skillset">
+          <div class="lbl">Linguagens &amp; processamento</div>
+          <p>Python, SQL, Spark, PySpark, Bash</p>
+        </div>
+        <div class="skillset">
+          <div class="lbl">Arquitetura de dados</div>
+          <p>Lakehouse, Arquitetura Medalhão, Delta Lake, Data Lake, ETL / ELT, CDC (Debezium, Kafka), modelagem para analytics, governança de dados</p>
+        </div>
+        <div class="skillset">
+          <div class="lbl">Engenharia &amp; operação</div>
+          <p>Git, Azure DevOps, Azure Repos, Docker, Linux, APIs REST, SFTP, Cloud Billing, Scrum, Kanban</p>
+        </div>
+        <div class="skillset">
+          <div class="lbl">Visualização</div>
+          <p>Power BI, Looker</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Perfil</h2>
+        <div class="skillset">
+          <p>Proatividade e autonomia · adaptação rápida a novas tecnologias · comunicação clara e trabalho em equipe · documentação técnica estruturada</p>
+        </div>
+      </section>
+    </aside>
+
+  </div>
+
+  <div class="foot">
+    <span>Juliana P. Adams Farias</span>
+    <span>Engenharia de Dados · 2026</span>
+  </div>
+
+</div>
+
+</body>
+</html>
